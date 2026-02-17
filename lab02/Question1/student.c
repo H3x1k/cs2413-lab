@@ -54,6 +54,32 @@ bool isValid(const char *s) {
     // Note:
     // - Input contains only bracket characters, per the prompt.
 
-    (void)s; // remove after implementing
-    return false; // placeholder
+    if (s == NULL) return false;
+
+    size_t n = strlen(s);
+    if (n % 2 != 0) return false;
+
+    //char *stack = malloc(n * sizeof(char));
+    //if (stack == NULL) return false;
+    char stack[1024];
+    size_t top = 0;
+
+    for (size_t i = 0; i < n; i++) {
+        char c = s[i];
+
+        if (c == '(' || c == '[' || c == '{') {
+            stack[top++] = c;
+        } else {
+            if (top == 0) return false;
+
+            char open = stack[--top];
+            if ((c == ')' && open != '(') ||
+                (c == ']' && open != '[') ||
+                (c == '}' && open != '{')) {
+                return false;
+            }
+        }
+    }
+
+    return top == 0;
 }

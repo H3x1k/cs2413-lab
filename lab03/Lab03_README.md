@@ -9,7 +9,7 @@ Lab03/ ├── Makefile ├── Question1/ (Reverse Linked List) ├── Q
 Question4/ (Middle Node of Linked List)
 
 
-Question 1 -- Reverse Linked List
+# Question 1 -- Reverse Linked List
 
 
 Function to implement:
@@ -32,9 +32,8 @@ Command to test:
 
     make run1
 
-============================================================ 
-Question 2 -- Swap Nodes in Pairs
-============================================================
+
+# Question 2 -- Swap Nodes in Pairs
 
 Function to implement:
 
@@ -57,9 +56,8 @@ Command to test:
 
     make run2
 
-============================================================ 
-Question 3 -- Linked List Cycle 
-============================================================
+
+# Question 3 -- Linked List Cycle 
 
 Function to implement:
 
@@ -78,9 +76,9 @@ Command to test:
 
     make run3
 
-============================================================ 
-Question 4 -- Middle Node of a Linked List
-============================================================
+
+# Question 4 -- Middle Node of a Linked List
+
 
 Function to implement:
 
@@ -105,9 +103,8 @@ Command to test:
 
     make run4
 
-============================================================ 
-General Instructions
-============================================================
+
+# General Instructions
 
 Compile and run default (Question 1):
 

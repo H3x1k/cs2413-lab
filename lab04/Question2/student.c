@@ -43,13 +43,22 @@ Note:
  * Definition for a binary tree node.
  */
 struct TreeNode {
-    int val;
-    struct TreeNode *left;
-    struct TreeNode *right;
+  int val;
+  struct TreeNode *left;
+  struct TreeNode *right;
 };
 
-
+bool isEqual(struct TreeNode* node1, struct TreeNode* node2) {
+  if (!node1 && !node2) return true;
+  if (!node1 || !node2) return false;
+  return (
+  node1->val == node2->val 
+  && isEqual(node1->left, node2->right) 
+  && isEqual(node1->right, node2->left)
+  );
+}
 
 bool isSymmetric(struct TreeNode* root) {
-  // TODO: implement
+  if (!root) return true;
+  return isEqual(root->left, root->right);
 }

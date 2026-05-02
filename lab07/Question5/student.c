@@ -21,8 +21,14 @@ Notes:
 */
 
 void selectionSort(int arr[], int size) {
-    // TODO: implement selection sort
-    (void)arr;
-    (void)size;
+    for (int i = 0; i < size; i++) {
+        int idx = i;
+        for (int j = i; j < size; j++) {
+            if (arr[j] < arr[idx]) idx = j;
+        }
+        int temp = arr[i];
+        arr[i] = arr[idx];
+        arr[idx] = temp;
+    }
 }
 
